@@ -1,0 +1,208 @@
+<title>Cluster Headache Groups</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: one reading column; mono section titles over a thin orange-to-purple rule; groups listed by language with native-name chips */
+:root {
+  --bg: #ffffff;
+  --surface: #f7fafc;
+  --fg: #1a202c;
+  --muted: #4a5568;
+  --line: #e2e8f0;
+  --orange: #f85604;
+  --orange-soft: #fef7f0;
+  --purple: #4f2ac4;
+  --purple-soft: #e5e7ff;
+  --rule: linear-gradient(90deg, #ff5600, #d5c3e2, #a780fd);
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --sans: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14121c; --surface: #1d1a28; --fg: #ecebf3; --muted: #a9a6ba; --line: #2e2a3d;
+    --orange: #ff7a33; --orange-soft: #2a1a12; --purple: #a98cff; --purple-soft: #262046; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14121c; --surface: #1d1a28; --fg: #ecebf3; --muted: #a9a6ba; --line: #2e2a3d;
+  --orange: #ff7a33; --orange-soft: #2a1a12; --purple: #a98cff; --purple-soft: #262046; color-scheme: dark;
+}
+body { background: var(--bg); color: var(--fg); font: 400 1.0625rem/1.65 var(--sans); }
+.wrap { max-width: 44rem; margin: 0 auto; padding-inline: 16px; padding-block: 3rem 3.5rem; display: grid; gap: 2.75rem; }
+h1, h2, p { margin: 0; }
+h1 { font: 800 clamp(2rem, 6vw, 2.9rem)/1.08 var(--sans); letter-spacing: -.02em; text-wrap: balance; }
+h1 em { font-style: normal; color: var(--orange); }
+a { color: var(--purple); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; border-radius: 2px; }
+header { display: grid; gap: 1rem; }
+.kicker { font: 500 .78rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--orange); }
+.lede { color: var(--muted); font-size: 1.125rem; max-width: 36rem; }
+.sec { display: grid; gap: 1.1rem; }
+.sec-title { display: grid; gap: .45rem; }
+.sec-title h2 { font: 600 1.2rem/1.2 var(--mono); }
+.sec-title::after { content: ""; height: 2px; background: var(--rule); }
+.start { background: var(--orange-soft); border-radius: 12px; padding: 1.4rem; display: grid; gap: .85rem; }
+.start ul, .signs ul { margin: 0; padding-left: 1.2rem; display: grid; gap: .3rem; }
+.start ul li::marker, .signs ul li::marker { color: var(--orange); }
+.btns { display: flex; flex-wrap: wrap; gap: .6rem; }
+.btn { display: inline-block; background: var(--orange); color: #fff; font-weight: 700; padding: .6rem 1.1rem; border-radius: 8px; text-decoration: none; }
+.btn.alt { background: transparent; color: var(--purple); border: 1.5px solid var(--purple); }
+.btn:hover { filter: brightness(1.06); }
+.note { font-size: .93rem; color: var(--muted); }
+.lang { display: grid; gap: .75rem; padding-block: 1.1rem .2rem; border-top: 1px solid var(--line); }
+.lang:first-of-type { border-top: 0; padding-top: 0; }
+.lang h3 { margin: 0; font: 700 1.05rem var(--sans); display: flex; gap: .55rem; align-items: center; flex-wrap: wrap; }
+.chip { font: 500 .8rem var(--mono); background: var(--purple-soft); color: var(--purple); border-radius: 999px; padding: .05rem .6rem; }
+.where { font: 400 .8rem var(--mono); color: var(--muted); }
+.item { display: grid; gap: .1rem; }
+.item > a { font-weight: 700; }
+.kind { font-size: .94rem; color: var(--muted); }
+.tag { font: 500 .7rem var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--orange); margin-right: .35rem; }
+.gap { font-size: .94rem; color: var(--muted); font-style: italic; }
+footer { display: grid; gap: .45rem; font-size: .88rem; color: var(--muted); }
+footer::before { content: ""; height: 2px; background: var(--rule); margin-bottom: .6rem; }
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="kicker">Cluster headache · patient groups</span>
+    <h1>You don't have to go through this <em>alone</em></h1>
+    <p class="lede">Patient groups and trusted information about cluster headache in your own language. If you have attacks but no diagnosis, or you can't get treatment that works, start with the box below.</p>
+  </header>
+
+  <section class="sec">
+    <div class="sec-title"><h2>Start here</h2></div>
+    <div class="start">
+      <p><strong>clusterinfo.org</strong> explains what stops attacks and what prevents them. It has:</p>
+      <ul>
+        <li>A 2-minute self-check (it is not a diagnosis)</li>
+        <li>How cluster headache differs from migraine</li>
+        <li>A short quiz that makes a summary you can take to your doctor</li>
+        <li>Guides to high-flow oxygen, verapamil and vitamin D3</li>
+      </ul>
+      <div class="btns">
+        <a class="btn" href="https://clusterinfo.org" target="_blank" rel="noopener">Go to clusterinfo.org</a>
+        <a class="btn alt" href="https://clusterfree.org/" target="_blank" rel="noopener">Treatment access: clusterfree.org</a>
+      </div>
+      <p class="note">Both sites are in English. Chrome, Edge and Safari can translate them for you. Take what you learn to your GP or neurologist rather than treating yourself. Some guides cover substances that are illegal in many countries.</p>
+    </div>
+  </section>
+
+  <section class="sec signs">
+    <div class="sec-title"><h2>Does this sound like you?</h2></div>
+    <ul>
+      <li>Very severe pain on one side, around or behind the eye or temple</li>
+      <li>Attacks last 15 minutes to 3 hours, often at the same time of day or night</li>
+      <li>A red or watering eye, a blocked or runny nose, or a drooping eyelid on the same side</li>
+      <li>You can't lie still during an attack</li>
+    </ul>
+    <p class="note">These are the main features doctors look for. Only a doctor can diagnose it. Many people wait years for the right diagnosis, so ask about cluster headache by name.</p>
+  </section>
+
+  <section class="sec">
+    <div class="sec-title"><h2>Groups and information by language</h2></div>
+
+    <div class="lang">
+      <h3>Nederlands <span class="chip">clusterhoofdpijn</span> <span class="where">NL · BE</span></h3>
+      <div class="item">
+        <a href="https://www.facebook.com/search/groups/?q=Clusterhoofdpijn" target="_blank" rel="noopener">Clusterhoofdpijn</a>
+        <span class="kind"><span class="tag">Group</span>Facebook group for people with cluster headache. Search for the name and ask to join.</span>
+      </div>
+      <div class="item">
+        <a href="https://hoofdpijnnet.nl/alles-over-clusterhoofdpijn/" target="_blank" rel="noopener">Hoofdpijnnet</a>
+        <span class="kind"><span class="tag">Association</span>Patient association for all headache types, with <a href="https://hoofdpijnnet.nl/lotgenoten/" target="_blank" rel="noopener">peer contact</a> and meetings.</span>
+      </div>
+    </div>
+
+    <div class="lang">
+      <h3>Deutsch <span class="chip">Clusterkopfschmerz</span> <span class="where">DE · AT · CH</span></h3>
+      <div class="item">
+        <a href="https://www.clusterkopf.de" target="_blank" rel="noopener">CSG – Bundesverband der Clusterkopfschmerz-Selbsthilfe-Gruppen</a>
+        <span class="kind"><span class="tag">Association</span>National federation of cluster headache self-help groups. Local groups, a forum, a doctor list and a phone line.</span>
+      </div>
+    </div>
+
+    <div class="lang">
+      <h3>Français <span class="chip">algie vasculaire de la face</span> <span class="where">FR</span></h3>
+      <div class="item">
+        <a href="https://www.helloasso.com/associations/association-francaise-des-cephalees" target="_blank" rel="noopener">Association Française des Céphalées</a>
+        <span class="kind"><span class="tag">Association</span>For migraine, cluster headache (AVF) and other severe headaches. Support groups and information.</span>
+      </div>
+    </div>
+
+    <div class="lang">
+      <h3>Dansk <span class="chip">Hortons hovedpine</span> <span class="where">DK</span></h3>
+      <div class="item">
+        <a href="https://www.hovedpineforeningen.dk/Hortons_hovedpine.html" target="_blank" rel="noopener">Hovedpineforeningen</a>
+        <span class="kind"><span class="tag">Association</span>Independent patient association for migraine and headache. A headache school and patient-to-patient contact.</span>
+      </div>
+    </div>
+
+    <div class="lang">
+      <h3>Svenska <span class="chip">klusterhuvudvärk</span> <span class="where">SE</span></h3>
+      <div class="item">
+        <a href="https://ki.se/forskning/centrum-for-klusterhuvudvark-for-patienter" target="_blank" rel="noopener">Centrum för klusterhuvudvärk, Karolinska Institutet</a>
+        <span class="kind"><span class="tag">Information</span>Research centre with information for patients and ways to take part in research.</span>
+      </div>
+    </div>
+
+    <div class="lang">
+      <h3>中文 <span class="chip">丛集性头痛 · 叢發性頭痛</span> <span class="where">CN · TW</span></h3>
+      <div class="item">
+        <a href="https://tieba.baidu.com/f?kw=%E4%B8%9B%E9%9B%86%E6%80%A7%E5%A4%B4%E7%97%9B" target="_blank" rel="noopener">丛集性头痛吧 (Baidu Tieba)</a>
+        <span class="kind"><span class="tag">Group</span>Patient forum where people share experiences with oxygen, nasal sprays and other treatments.</span>
+      </div>
+      <div class="item">
+        <a href="https://taiwanheadache.org.tw/" target="_blank" rel="noopener">台灣頭痛學會 Taiwan Headache Society</a>
+        <span class="kind"><span class="tag">Information</span>Patient articles, including on cluster headache, and a list of recommended doctors.</span>
+      </div>
+      <div class="item">
+        <a href="https://m.dxy.com/disease/1861/detail" target="_blank" rel="noopener">丁香医生 DXY: 丛集性头痛</a>
+        <span class="kind"><span class="tag">Information</span>Doctor-reviewed patient page in simplified Chinese.</span>
+      </div>
+    </div>
+
+    <div class="lang">
+      <h3>한국어 <span class="chip">군발두통</span> <span class="where">KR</span></h3>
+      <div class="item">
+        <a href="https://cafe.naver.com/clusterheadache" target="_blank" rel="noopener">ClusterHeadache (네이버 카페)</a>
+        <span class="kind"><span class="tag">Group</span>Naver café for people with cluster headache, with boards for sharing experiences and treatment information. Log in to Naver to read posts.</span>
+      </div>
+      <div class="item">
+        <a href="https://www.amc.seoul.kr/asan/healthinfo/disease/diseaseDetail.do?contentId=31870" target="_blank" rel="noopener">서울아산병원: 군발성 두통 증후군</a>
+        <span class="kind"><span class="tag">Information</span>Patient page from Asan Medical Center, Seoul.</span>
+      </div>
+    </div>
+
+    <div class="lang">
+      <h3>Русский <span class="chip">кластерная головная боль</span> <span class="where">RU</span></h3>
+      <div class="item">
+        <a href="https://med.neurology.ru/pacientam/spravochnik-zabolevaniy/puchkovaya-klasternaya-golovnaya-bol-/" target="_blank" rel="noopener">Научный центр неврологии: пучковая (кластерная) головная боль</a>
+        <span class="kind"><span class="tag">Information</span>Patient page from the Russian Research Center of Neurology.</span>
+      </div>
+      <div class="item">
+        <a href="https://painrussia.ru/upload/iblock/677/6779c0422d5f64464fcbca059ffcb08f.pdf" target="_blank" rel="noopener">Информация для пациентов (РОИГБ)</a>
+        <span class="kind"><span class="tag">Information</span>Patient leaflet from the Russian Headache Society (PDF).</span>
+      </div>
+      <p class="gap">No Russian-language patient group found yet.</p>
+    </div>
+
+    <div class="lang">
+      <h3>العربية <span class="chip">الصداع العنقودي</span> <span class="where">Arabic</span></h3>
+      <div class="item">
+        <a href="https://www.altibbi.com/%D9%85%D8%B5%D8%B7%D9%84%D8%AD%D8%A7%D8%AA-%D8%B7%D8%A8%D9%8A%D8%A9/%D8%A7%D9%84%D8%A7%D9%85%D8%B1%D8%A7%D8%B6-%D8%A7%D9%84%D8%B9%D8%B5%D8%A8%D9%8A%D8%A9/%D8%B5%D8%AF%D8%A7%D8%B9-%D8%B9%D9%86%D9%82%D9%88%D8%AF%D9%8A" target="_blank" rel="noopener">الطبي Altibbi: صداع عنقودي</a>
+        <span class="kind"><span class="tag">Information</span>Arabic health platform's page on cluster headache.</span>
+      </div>
+      <div class="item">
+        <a href="https://gesund.bund.de/ar/cluster-kopfschmerzen" target="_blank" rel="noopener">gesund.bund.de: الصداع العنقودي</a>
+        <span class="kind"><span class="tag">Information</span>Causes and treatment, in Arabic, from Germany's health ministry.</span>
+      </div>
+      <p class="gap">No Arabic-language patient group found yet.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Links checked 8 October 2026. Groups close or move. If a link is broken or a group is missing, tell whoever sent you this page.</p>
+    <p>This page lists groups and information. It is not medical advice, and it is not run by any of the organisations listed.</p>
+  </footer>
+</div>
